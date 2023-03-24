@@ -1,24 +1,40 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+function Progress({ done }) {
+  const [style, setStyle] = useState({});
+  
+  useEffect(() => {
+    setTimeout(() => {
+      const newStyle = {
+        opacity: 1,
+        width: `${done}%`
+      }
+      
+      setStyle(newStyle);
+    }, 200);
+  }, [done]);
+  
+  return (
+    
+    <div className="progress">
+      <div className="progress-done" style={style}>
+        {done}%
+      </div>
+    </div>
+  )
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <form className="shadow-form"> 
+    <>
+    <h1 > track the progress of our love</h1>
+      <p>Chloe's love Progress Bar</p>
+      <Progress done={45} />
+      <p>Harry's love Progress Bar</p>
+      <Progress done={70} />
+    </>
+    </form> 
   );
 }
 
