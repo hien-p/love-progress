@@ -76,3 +76,43 @@ body {
   text-align: center;
   margin-top: 0;
 }
+
+@media screen and (max-width: 350px) {
+  .progress {
+    height: 20px;
+  }
+  
+  .progress-done {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .progress {
+    max-width: 500px;
+  }
+  
+  .shadow-form {
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .progress {
+    max-width: 300px;
+  }
+  
+  .shadow-form {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .progress {
+    max-width: 250px;
+  }
+  
+  .progress-done {
+    font-size: 10px;
+  }
+}
