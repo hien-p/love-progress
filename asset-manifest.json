@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/love-progress/static/css/main.dfad4195.css",
+    "main.css": "/love-progress/static/css/main.64e00b0e.css",
     "main.js": "/love-progress/static/js/main.19784b50.js",
     "static/js/787.28cb0dcd.chunk.js": "/love-progress/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/love-progress/index.html",
-    "main.dfad4195.css.map": "/love-progress/static/css/main.dfad4195.css.map",
+    "main.64e00b0e.css.map": "/love-progress/static/css/main.64e00b0e.css.map",
     "main.19784b50.js.map": "/love-progress/static/js/main.19784b50.js.map",
     "787.28cb0dcd.chunk.js.map": "/love-progress/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dfad4195.css",
+    "static/css/main.64e00b0e.css",
     "static/js/main.19784b50.js"
   ]
 }
