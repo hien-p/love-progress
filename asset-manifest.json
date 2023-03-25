@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/love-progress/static/css/main.d658e746.css",
-    "main.js": "/love-progress/static/js/main.4ad921d3.js",
+    "main.css": "/love-progress/static/css/main.5e4235e6.css",
+    "main.js": "/love-progress/static/js/main.e1c25ea3.js",
     "static/js/787.28cb0dcd.chunk.js": "/love-progress/static/js/787.28cb0dcd.chunk.js",
+    "static/media/timemachine.mp4": "/love-progress/static/media/timemachine.6098ea04017231b29646.mp4",
+    "static/media/logo.svg": "/love-progress/static/media/logo.6ce24c58023cc2f8fd88.svg",
     "index.html": "/love-progress/index.html",
-    "main.d658e746.css.map": "/love-progress/static/css/main.d658e746.css.map",
-    "main.4ad921d3.js.map": "/love-progress/static/js/main.4ad921d3.js.map",
+    "main.5e4235e6.css.map": "/love-progress/static/css/main.5e4235e6.css.map",
+    "main.e1c25ea3.js.map": "/love-progress/static/js/main.e1c25ea3.js.map",
     "787.28cb0dcd.chunk.js.map": "/love-progress/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d658e746.css",
-    "static/js/main.4ad921d3.js"
+    "static/css/main.5e4235e6.css",
+    "static/js/main.e1c25ea3.js"
   ]
 }
