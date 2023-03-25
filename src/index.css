@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #f4f4f4;
+  background: linear-gradient(to bottom right, #3b3c4e, #4b4c61, blue);
   font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: column;
@@ -13,6 +13,41 @@ body {
   justify-content: center;
   height: 100vh;
   margin: 0;
+}
+
+.shadow-form {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  width: 900px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white; /* Set font color to white */
+}
+
+.shadow-form h1 {
+  text-align: center;
+  margin-top: 0;
+  font-size: 36px; /* Increase font size */
+  font-weight: bold; /* Set font weight to bold */
+  line-height: 1.5; /* Set line height */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); /* Add text shadow */
+}
+
+.cs {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.rotate {
+  transform: rotate(360deg);
+  transition: transform 1s;
 }
 
 .progress {
@@ -55,6 +90,25 @@ body {
   transition: opacity 0.3s ease-in-out;
 }
 
+
+
+.cs img {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
 .progress-done:hover {
   opacity: 1;
 }
@@ -62,57 +116,79 @@ body {
 .progress-done:hover:before {
   opacity: 0.9;
 }
-.shadow-form {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 10px;
-  width: 900px;
-  max-width: 90%;
+
+
+
+.heart-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #87CEFA; /* light blue */
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.heart-button:hover {
+  background-color: navy;
+}
+
+.heart-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 255, 0.5);
+}
+
+.heart-button svg {
+  width: 2rem;
+  height: 2rem;
+  fill: white;
+  margin-right: 1rem;
 }
 
 
 
-.shadow-form h1 {
-  text-align: center;
-  margin-top: 0;
-}
+  @media screen and (max-width: 350px) {
+    .progress {
+      height: 20px;
+    }
+    
+    .progress-done {
+      font-size: 12px;
+    }
+  }
 
-@media screen and (max-width: 350px) {
-  .progress {
-    height: 20px;
+  @media screen and (max-width: 768px) {
+    .progress {
+      max-width: 500px;
+    }
+    
+    .shadow-form {
+      max-width: 600px;
+    }
   }
-  
-  .progress-done {
-    font-size: 12px;
-  }
-}
 
-@media screen and (max-width: 768px) {
-  .progress {
-    max-width: 500px;
+  @media screen and (max-width: 576px) {
+    .progress {
+      max-width: 300px;
+    }
+    
+    .shadow-form {
+      max-width: 400px;
+    }
   }
-  
-  .shadow-form {
-    max-width: 600px;
-  }
-}
 
-@media screen and (max-width: 576px) {
-  .progress {
-    max-width: 300px;
+  @media screen and (max-width: 414px) {
+    .progress {
+      max-width: 250px;
+    }
+    
+    .progress-done {
+      font-size: 10px;
+    }
   }
-  
-  .shadow-form {
-    max-width: 400px;
-  }
-}
 
-@media screen and (max-width: 414px) {
-  .progress {
-    max-width: 250px;
-  }
-  
-  .progress-done {
-    font-size: 10px;
-  }
-}
