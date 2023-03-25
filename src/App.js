@@ -28,6 +28,7 @@ function Progress({ done }) {
 function App() {
   const [isFormVisible, setIsFormVisible] = useState(false);
   const [date, setDate] = useState("");
+  const [isButtonVisible, setIsButtonVisible] = useState(true);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -39,38 +40,40 @@ function App() {
     return () => clearInterval(intervalId);
   }, []);
 
-  
-
   const handleButtonClick = () => {
-    setIsFormVisible(!isFormVisible);
+    setIsFormVisible(true);
+    setIsButtonVisible(false);
   }
 
   return (
     <div>
-      <button className="heart-button" onClick={handleButtonClick}>
-        <BlueHeartIcon />
-        Press to see our love progress
-      </button>
+      {isButtonVisible &&
+        <div>
+        <button className="heart-button" onClick={handleButtonClick}>
+          <BlueHeartIcon />
+          press to see our love progress
+        </button>
+        <p className="current-time">current time: {date.replace(',', '').replace(/\//g, '/')}</p>
+      </div>
+      }
+      
       {isFormVisible &&
         <form className="shadow-form"> 
-          <>
-            <h1>Track the progress of our love</h1>
-            <p>Current time in Vietnam: {date.replace(',', '').replace(/\//g, '/')}</p>
-            {/* <div className={`cs ${isLogoRotated ? 'rotate' : ''}`}>
-              <img src="https://cdn.discordapp.com/avatars/953690599930859610/2d207a221f6c510f9250c427aa772222.webp?size=96" id="logo" alt="Logo" onClick={handleLogoClick} />
-            </div> */}
-            <p>Chloe's love Progress Bar</p>
-            <Progress done={45} />
-            {/* <div className={`cs ${isLogoRotated ? 'rotate' : ''}`}>
-              <img src="https://cdn.discordapp.com/avatars/725994929133715526/2b4eeff926a7ab0574e82be4f153ebeb.webp?size=96" id="logo" alt="Logo" />
-            </div> */}
-            <p>Harry's love Progress Bar</p>
-            <Progress done={70} />
-          </>
-        </form>
+        <h1>track the progress of our love</h1>
+        
+        <div className="progress-container">
+          <p className="progress-label" style={{textAlign: 'left'}}>chloe's love Progress Bar</p>
+          <Progress done={45} />
+        </div>
+        <div className="progress-container" style={{textAlign: 'left'}}>
+          <p className="progress-label" style={{textAlign: 'left'}}>carry's love Progress Bar</p>
+          <Progress done={70} />
+        </div>
+      </form>
       }
     </div>
   );
 }
+
 
 export default App;

@@ -14,7 +14,6 @@ body {
   height: 100vh;
   margin: 0;
 }
-
 .shadow-form {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 20px;
@@ -24,16 +23,43 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white; /* Set font color to white */
+  color: white;
 }
 
 .shadow-form h1 {
-  text-align: center;
+  text-align: left;
   margin-top: 0;
-  font-size: 36px; /* Increase font size */
-  font-weight: bold; /* Set font weight to bold */
-  line-height: 1.5; /* Set line height */
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); /* Add text shadow */
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.shadow-form p {
+  text-align: left;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.shadow-form p:first-child {
+  margin-top: 0;
+}
+
+.shadow-form p:last-child {
+  margin-bottom: 0;
+}
+
+.shadow-form .progress-label {
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.shadow-form .progress-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
 }
 
 .cs {
@@ -77,18 +103,7 @@ body {
   opacity: 0;
 }
 
-.progress-done:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  border-radius: 20px;
-  background: linear-gradient(to left, #F2709C, #FF9472);
-  box-shadow: 0 3px 3px -5px #F2709C, 0 2px 5px #F2709C;
-  opacity: 0.7;
-  transition: opacity 0.3s ease-in-out;
-}
+
 
 
 
@@ -133,6 +148,15 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
+
+
+.current-time {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  margin: 10px 0;
+  } 
+
 
 .heart-button:hover {
   background-color: navy;
