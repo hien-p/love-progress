@@ -66,7 +66,7 @@ function App() {
           <Progress done={45} />
         </div>
         <div className="progress-container" style={{textAlign: 'left'}}>
-          <p className="progress-label" style={{textAlign: 'left'}}>carry's love Progress Bar</p>
+          <p className="progress-label" style={{textAlign: 'left'}}>harry's love Progress Bar</p>
           <Progress done={70} />
         </div>
       </form>
