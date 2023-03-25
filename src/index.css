@@ -14,6 +14,7 @@ body {
   height: 100vh;
   margin: 0;
 }
+
 .shadow-form {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 20px;
@@ -62,6 +63,42 @@ body {
   align-items: left;
 }
 
+.shadow-form audio {
+  width: 100%;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  }
+  
+  .shadow-form audio::-webkit-media-controls-panel {
+  background-color: transparent;
+  border-radius: 10px;
+  }
+  
+  .shadow-form audio::-webkit-media-controls-play-button {
+  background-image: url('logo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s ease-in-out;
+  }
+  
+  .shadow-form audio::-webkit-media-controls-play-button:hover {
+  transform: scale(1.2);
+  }
+  
+  .shadow-form audio::-webkit-media-controls-volume-slider {
+  width: 50px;
+  transition: transform 0.2s ease-in-out;
+  }
+  
+  .shadow-form audio::-webkit-media-controls-volume-slider:hover {
+  transform: scale(1.2);
+  }
+
+
 .cs {
   position: relative;
   width: 100px;
@@ -103,10 +140,6 @@ body {
   opacity: 0;
 }
 
-
-
-
-
 .cs img {
   animation: pulse 2s ease-in-out infinite;
 }
@@ -123,7 +156,6 @@ body {
   }
 }
 
-
 .progress-done:hover {
   opacity: 1;
 }
@@ -134,21 +166,20 @@ body {
 
 
 
-.heart-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: white;
-  background-color: #87CEFA; /* light blue */
-  border: none;
-  border-radius: 0.5rem;
-  padding: 1rem 2rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
 
+.heart-button {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
 
 .current-time {
   font-size: 18px;
@@ -173,6 +204,7 @@ body {
   fill: white;
   margin-right: 1rem;
 }
+
 
 
 

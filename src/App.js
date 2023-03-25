@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import BlueHeartIcon from './components/BlueHeartIcon';
-
+import timemachine from './assets/audio/timemachine.mp4';
 function Progress({ done }) {
   const [style, setStyle] = useState({});
   
@@ -24,6 +24,7 @@ function Progress({ done }) {
     </div>
   )
 }
+
 
 function App() {
   const [isFormVisible, setIsFormVisible] = useState(false);
@@ -53,7 +54,9 @@ function App() {
           <BlueHeartIcon />
           press to see our love progress
         </button>
+        
         <p className="current-time">current time: {date.replace(',', '').replace(/\//g, '/')}</p>
+       
       </div>
       }
       
@@ -68,12 +71,17 @@ function App() {
         <div className="progress-container" style={{textAlign: 'left'}}>
           <p className="progress-label" style={{textAlign: 'left'}}>harry's love Progress Bar</p>
           <Progress done={70} />
+          
+          <audio controls>
+            <source src={timemachine} type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
         </div>
+
       </form>
       }
     </div>
   );
 }
-
 
 export default App;
